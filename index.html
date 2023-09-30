@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+    .list1{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: inline-block;
+        border: 1px solid #ddd;
+        min-width: 250px;
+    }
+    .list1 li{
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #f3f3f3;
+    }
+    .list1 li:hover{
+        background-color: rgb(20, 56, 174);
+        color: white;
+    }
+
+    .list2{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: inline-block;
+    }
+    .list2 li{
+        display: inline-block;
+        background-color: #ddd;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+    }
+    .list2 li a{
+        color: black;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .list2 li:hover {
+        background-color: brown;
+    }
+    .list2 li:hover a{
+        color: white;
+    }
+    
+    .menu{
+        background-color:#e25300;
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        padding: 12px 20px;
+        border-radius: 8px;
+    }
+    .selected-bar{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .selected-bar li{
+        display: inline-block;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 30px;
+    }
+    .mom{
+        background-color: #ccc;
+        width: 100%;
+        height: 1000px;
+        position: relative;
+        border-radius: 8px;
+        margin-top: 50px;
+    }
+    .child{
+        width: 100px;
+        height: 60px;
+        position: absolute;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 8px;
+    }
+    .child-1{
+        top: 0;
+        left: 0;
+        background-color: #d44e00;
+    }
+    .child-2{
+        top: 20px;
+        right: 20px;
+        background-color: #d40000;
+    }
+    .child-3 {
+    background: #369400;
+    bottom: 40px;
+    right: 40px;
+    }
+    .child-4 {
+        background: #2a00d4;
+        bottom: 60px;
+        left: 60px;
+    }
+
+    .content{
+        background-color: #0065bc;
+        position: relative;     
+        border-radius: 8px;   
+        padding: 80px 50px;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+    .content-text{
+        color: white;
+        z-index: 1;
+        position: relative;
+    }
+    .content-text::first-letter{
+       
+        font-size: 50px;
+    }
+    .content-text::first-line{
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    .circle{
+        position: absolute;
+    }
+    .circle-1{
+        background-color: #00539b;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        top: 20px;
+        left: 20px;
+    }
+    .circle-2{
+        background-color: #00539b;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        bottom: -50px;
+        right: -50px;
+    }
+    .call{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
+    .call a{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        background-color: #147a00;
+        border-radius: 50%;
+        z-index: 1000;
+    }
+
+    table{
+        font-family: 'Roboto', sans-serif;
+    }
+    table thead th{
+        color: white;
+        background-color: #01987a;
+        border: #01987a;
+    }
+    table th, table td{
+        padding: 10px 20px;
+        text-align: left;
+    }
+    table, tr, th, td{
+        border-spacing: 0;
+    }
+    table tbody td{
+        border-bottom: 1px solid #ddd;
+    }
+</style>
+<body>
+    <h2>Bài tập về list</h2>
+    <p><b>Yêu cầu</b>: Code các menu như dưới đây.</p>
+    <ul class="list1">
+        <li>Quần áo</li>
+        <li>Giày dép</li>
+        <li>Mũ</li>
+        <li>Khăn</li>
+        <li>Găng tay</li>
+    </ul>
+    <hr>
+    <ul class="list2">
+        <li><a href="https://www.google.com/" target="_blank"><i class="fa-brands fa-google"></i></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.tiktok.com/explore" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+    </ul>
+    <br>
+    <h2>Bài tập về position</h2>   
+    <p><b>Yêu cầu</b>: Code các box như dưới đây. Chú ý có cả bo góc cho các element.</p>
+    <div class="menu">
+        <ul class="selected-bar">
+            <li>Trang chủ</li>
+            <li>Giới thiệu</li>
+            <li>Sản phẩm</li>
+            <li>Tin tức</li>
+            <li>Liên hệ</li>
+        </ul>
+    </div>
+
+    <div class="mom">
+        <div class="child child-1">1</div>
+        <div class="child child-2">2</div>
+        <div class="child child-3">3</div>
+        <div class="child child-4">4</div>  
+    </div>
+    
+    <div class="content">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe.</div>
+    </div>
+
+    <div class="call"><a href=""><i class="fa-solid fa-phone"></i></a></div>
+
+    <br>
+    <h2>Bài tập về table</h2>
+    <p><b>Yêu cầu</b>: Code table như dưới đây, dùng font Roboto trên trang google font.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ tên</th>
+                <th>Giới tính</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lê Văn A</td>
+                <td>Nam</td>
+                <td>18</td>                 
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lê Thị B</td>
+                <td>Nữ</td>
+                <td>22</td>                 
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lê Văn C</td>
+                <td>Nam</td>
+                <td>26</td>                 
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
